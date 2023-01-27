@@ -1,0 +1,86 @@
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+  .about_content {
+      padding-bottom: 3rem;
+  }
+
+  .about_heading {
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+  }
+
+  .about_heading h2 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+      font-family: 'Merriweather', serif;
+
+  }
+
+  .about_heading p {
+      letter-spacing: 0.78px;
+      font-style: italic;
+      font-family: 'Merriweather', serif;
+
+      font-weight: 500;
+  }
+
+  .about_card_container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      flex: 0 0 100%;
+      width: 100%;
+  }
+
+  .about_card {
+      text-align: center;
+      background: #fff;
+      padding: 2rem 3rem;
+      flex: 0 0 22%;
+      width: 25%;
+
+  }
+
+  .about_card h4 {
+      margin: 32px 2px 0;
+      font-family: 'Merriweather', serif;
+      line-height: 1.2;
+      font-size: 1.2rem;
+      letter-spacing: 0.8px;
+
+      font-style: italic;
+  }
+
+  .about_card img {
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+  }
+
+
+  @media screen and (max-width: 1050px) {
+
+      .about_card {
+          text-align: center;
+          background: #fff;
+          padding: 2rem 3rem;
+          flex: 0 0 33%;
+          width: 50%;
+      }
+
+  }
+
+  @media screen and (max-width: 1050px) {
+      .about_card {
+          text-align: center;
+          background: #fff;
+          padding: 2rem 3rem;
+          flex: 0 0 70%;
+          width: 100%;
+      }
+  }

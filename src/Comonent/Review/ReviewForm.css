@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
+.review_heading {
+    color: black;
+
+}
+
+.review_form_container form {
+    /* padding: 1rem 0; */
+    padding: 1rem 10px 1rem 0;
+
+
+}
+
+.review_star {
+    padding: 1rem 0;
+    margin-left: 0.7rem;
+
+}
+
+.review_star i {
+    color: orange;
+    font-size: 2rem;
+    padding-right: 2px;
+}
+
+.review_form_container input {
+    width: 100%;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 2rem;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+
+}
+
+.review_form_container textarea {
+    width: 100%;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+
+}
+
+.review_form_container button {
+    padding: 13px;
+    background: #287bff;
+    border: none;
+    color: #fff;
+    letter-spacing: 0.7px;
+    width: 140px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.review_form_container button:hover {
+    opacity: 0.7;
+    /* border: 1px solid #287bff; */
+}
+
+.review_heading h3 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+.review_heading h4 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+
+.review_content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* background-image: url('../../Img/review1.jpg'); */
+    background-color: #6c5cf585;
+
+}
+
+.review_1 {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.review_1 img {
+    width: 100%;
+    height: auto;
+}
+
+.review_2 {
+    flex: 0 0 46%;
+    width: 50%;
+}
+
+@media screen and (max-width: 810px) {
+    .review_1 {
+        flex: 0 0 100%;
+        width: 100%;
+        /* padding: 0 1rem; */
+    }
+
+    .review_2 {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .review_form_container form {
+        /* padding: 1rem 0; */
+        padding: 1rem 0px 1rem 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .review_item {
+        width: 90%;
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .review_item {
+        width: 95%;
+        padding: 1rem 1rem;
+    }
+}

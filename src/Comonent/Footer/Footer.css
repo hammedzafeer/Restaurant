@@ -1,0 +1,193 @@
+
+  :root {
+    --text-color: #fff;
+    --back-1: #303030;
+    --back-2: #e8631c;
+    --back-1-color: rgba(48, 48, 48, 0.8);
+    --transition: 0.7s ease-in-out;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.padd-5 {
+    padding: 0 5%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer_3 Link {
+    color: #fff;
+}
+
+.text {
+    letter-spacing: 0.7px;
+    line-height: 1.5rem;
+    padding: 15px 0;
+}
+/* footer */
+footer {
+    color: var(--text-color);
+
+    background: var(--back-1);
+    justify-content: space-between;
+    flex: 0 0 100%;
+    /* width: 100%; */
+    padding: 0 5%;
+}
+
+.footer {
+    padding: 5% 0;
+    align-items: flex-start !important;
+
+}
+
+footer .footer_4 {
+    flex: 0 0 38%;
+    width: 40%;
+}
+
+.footer_4 .musicology {
+    padding-right: 25px;
+}
+
+.footer_4 .musicology p {
+    text-align: justify;
+    padding-top: 0;
+
+}
+
+.footer_heading {
+    margin-bottom: 20px;
+}
+
+
+.icon li {
+    background: var(--text-color);
+    margin-right: 14px;
+    /* padding: 10px 13px; */
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon li i {
+    color: var(--back-1);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.icon li:hover i {
+    color: var(--text-color);
+}
+
+.icon li:hover {
+    background: transparent;
+}
+
+footer .footer_6 {
+    flex: 0 0 58%;
+    width: 60%;
+    justify-content: space-between;
+    align-items: flex-start !important;
+}
+
+.footer_6 .footer_3 {
+    padding-left: 25px;
+}
+
+.footer_3 ul {}
+
+.footer_3 ul li {
+    padding-bottom: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.footer_3 ul li:hover {
+    transform: scale(1.02);
+}
+
+.footer_text {
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+
+    footer .footer_4 {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-bottom: 6%;
+    }
+
+    .footer_4 .musicology {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_heading {
+        font-size: 1.6rem;
+    }
+
+    .footer_4 .musicology p {
+        width: 75%;
+    }
+
+    footer .footer_6 {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+   
+
+    .footer_6 .footer_3 {
+        padding-left: 25px;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .footer_4 .musicology {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer_6 .footer_3 {
+        padding-left: 0;
+        text-align: left;
+        margin: 20px 0;
+    }
+}
+
