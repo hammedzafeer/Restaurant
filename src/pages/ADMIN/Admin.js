@@ -1,4 +1,4 @@
-import Navbar from '../../Comonent/Navbar/Nav'
+import Navbar from '../../Comonent/User/Navbar/Nav'
 function Admin() {
     return ( 
         <div>

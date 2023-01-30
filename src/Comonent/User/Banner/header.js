@@ -1,5 +1,5 @@
 import './Banner.css'
-import res1 from './res1.jpg'
+import res1 from '../../../Img/res1.jpg'
 
 function Header() {
     return (

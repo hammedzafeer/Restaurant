@@ -1,9 +1,9 @@
 import './AboutComponent.css'
 
-import about1 from '../../Img/about_1.jpeg'
-import about2 from '../../Img/about_2.jpeg'
-import about3 from '../../Img/about_3.jpeg'
-import about4 from '../../Img/about_4.jpg'
+import about1 from '../../../Img/about_1.jpeg'
+import about2 from '../../../Img/about_2.jpeg'
+import about3 from '../../../Img/about_3.jpeg'
+import about4 from '../../../Img/about_4.jpg'
 
 
 function AboutComponenet() {

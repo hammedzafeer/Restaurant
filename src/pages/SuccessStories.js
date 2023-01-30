@@ -1,6 +1,6 @@
-import Navbar from "../Comonent/Navbar/Nav";
-import Review from "../Comonent/Review/Review";
-import ReviewForm from "../Comonent/Review/ReviewForm";
+import Navbar from "../Comonent/User/Navbar/Nav";
+import Review from "../Comonent/User/Review/Review";
+import ReviewForm from "../Comonent/User/Review/ReviewForm";
 
 function Services() {
     return (

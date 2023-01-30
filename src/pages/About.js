@@ -1,5 +1,5 @@
-import AboutComponenet from "../Comonent/About/AboutComponent";
-import Navbar from "../Comonent/Navbar/Nav";
+import AboutComponenet from "../Comonent/User/About/AboutComponent";
+import Navbar from "../Comonent/User/Navbar/Nav";
 
 
 function About() {

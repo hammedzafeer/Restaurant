@@ -1,5 +1,5 @@
-import ContactUs from "../Comonent/Contact/Contact";
-import Navbar from "../Comonent/Navbar/Nav";
+import ContactUs from "../Comonent/User/Contact/Contact";
+import Navbar from "../Comonent/User/Navbar/Nav";
 
 function ContactPage() {
     return (

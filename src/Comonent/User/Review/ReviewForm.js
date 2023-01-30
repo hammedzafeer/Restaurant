@@ -1,5 +1,5 @@
 import './ReviewForm.css'
-import review1 from '../../Img/review.jpg'
+import review1 from '../../../Img/review.jpg'
 // import review2 from '../../Img/review1.jpg'
 import { useState } from "react";
 
