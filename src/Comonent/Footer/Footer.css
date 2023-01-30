@@ -113,8 +113,10 @@ footer .footer_6 {
     padding-left: 25px;
 }
 
-.footer_3 ul {}
-
+.footer_3 ul li a,
+.footer_3 ul li Link{
+    color: #fff;
+}
 .footer_3 ul li {
     padding-bottom: 12px;
     cursor: pointer;

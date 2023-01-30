@@ -11,7 +11,12 @@ import Home from "./pages/Home";
 import Services from './pages/SuccessStories';
 
 import Footer from "./Comonent/Footer/Footer";
+import Admin from './pages/ADMIN/Admin';
+// import LoadingBar from 'react-top-loading-bar';
+// // import { useState } from 'react';
 function App() {
+  // const [progress, setProgress] = useState(0)
+
   return (
     <div>
       {/* <div className="backImg">
@@ -19,12 +24,19 @@ function App() {
       </div>
       <ContactUs />
       <Footer /> */}
+      {/* <LoadingBar
+        color='#f11946'
+        progress={progress}
+        height={4}
+        onLoaderFinished={() => setProgress(100)}
+      /> */}
       <Routes>
+      
+      <Route path='/Admin' element={<Admin />} />
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/success' element={<Services />} />
-
       </Routes>
       <Footer />
       {/* <Home /> */}

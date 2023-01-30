@@ -66,7 +66,7 @@ nav {
 @media screen and (max-width: 900px) {
     .menu_header {
         /* padding-bottom: 15px; */
-        padding-bottom: 1rem;
+        padding-bottom: 1rem !important;
 
     }
 
@@ -80,15 +80,15 @@ nav {
 
     /* padding: 0 1rem; */
     .nav_container {
-        padding: 0 1rem;
+        padding: 0 1rem !important;
     }
 
     .menu_container li a {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 }
 @media screen and (max-width: 450px) {
     .menu_container li a, .menu_header a {
-        padding: 10px 5px;
+        padding: 10px 5px !important;
     }
 }
