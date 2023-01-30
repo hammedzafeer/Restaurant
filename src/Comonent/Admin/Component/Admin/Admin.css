@@ -1,0 +1,194 @@
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.admin_container {
+  position: relative;
+  width: 100%;
+}
+
+
+
+/* <!-- ====== Datalist Items Start ====== --> */
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.details .recentcustomer {
+  position: relative;
+  /* display: grid; */
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgb(0 0 0 / 8%);
+  border-radius: 20px;
+  overflow: auto;
+}
+
+.data-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.btn {
+  position: relative;
+  padding: 7px 12px;
+  background: var(--blue);
+  color: var(--white-text);
+  border-radius: 6px;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details table thead td {
+  font-weight: 600;
+  color: var(--black);
+
+}
+
+.details table img {
+  width: 100px;
+  height: auto;
+}
+
+.details table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.details table tr:last-child {
+  border-bottom: none;
+}
+
+.details table tbody tr:hover,
+.details table tbody tr.active {
+  background: var(--blue);
+  color: var(--white-text);
+  cursor: pointer;
+}
+
+.details table tr td {
+  padding: 10px;
+  min-width: 200px;
+  height: 50px;
+}
+
+.details table tbody tr td:last-child {
+  /* text-align: right; */
+}
+
+.status {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.status.Active {
+  color: var(--white);
+  background: #999914;
+}
+
+.status.Deactive {
+  color: var(--white);
+  background: red;
+}
+
+.drop_menu {
+  position: relative;
+}
+
+.drop_menu span ion-icon {
+  font-size: 1.5em;
+
+}
+
+.drop_menu span:hover ul {
+  display: block;
+}
+
+.drop_menu ul {
+  display: none;
+  position: absolute;
+  background: var(--blue);
+  width: 100px;
+  /* padding: 10px 15px; */
+  z-index: 5;
+  /* text-align: center; */
+}
+
+.drop_menu ul.active {
+  display: block;
+}
+
+.drop_menu ul li {
+  padding: 8px 10px;
+}
+
+.drop_menu ul li:hover {
+  background: var(--black1);
+}
+
+.drop_menu ul li a {
+  color: var(--white-text);
+
+}
+
+
+@media only screen and (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main-contant {
+    width: 100%;
+    left: 0;
+  }
+
+  .main-contant.active {
+    left: 300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .admin {
+    min-width: 40px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 100;
+  }
+
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+
+  .toggle {
+    z-index: 101;
+  }
+
+  .toggle.active {
+    color: var(--white);
+  }
+}

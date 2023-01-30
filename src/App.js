@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage';
 import Home from "./pages/Home";
 import Services from './pages/SuccessStories';
 
-import Footer from "./Comonent/Footer/Footer";
+import Footer from "./Comonent/User/Footer/Footer";
 import Admin from './pages/ADMIN/Admin';
 // import LoadingBar from 'react-top-loading-bar';
 // // import { useState } from 'react';
