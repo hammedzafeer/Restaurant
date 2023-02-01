@@ -1,5 +1,6 @@
 import ContactUs from "../Comonent/User/Contact/Contact";
 import Navbar from "../Comonent/User/Navbar/Nav";
+import FooterComponent from '../Comonent/User/Footer/Footer'
 
 function ContactPage() {
     return (
@@ -10,6 +11,7 @@ function ContactPage() {
                 <p>please call at least 24 hours in advance for catering orders</p>
             </div>
             <ContactUs />
+            <FooterComponent />
         </div>
     );
 }

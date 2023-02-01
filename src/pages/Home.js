@@ -1,5 +1,7 @@
 import Navbar from "../Comonent/User/Navbar/Nav";
 import ContactUs from "../Comonent/User/Contact/Contact";
+import FooterComponent from '../Comonent/User/Footer/Footer'
+
 function Home() {
     return (
         <div>
@@ -7,6 +9,7 @@ function Home() {
                 <Navbar />
             </div> 
             <ContactUs />
+            <FooterComponent />
         </div>
     );
 }

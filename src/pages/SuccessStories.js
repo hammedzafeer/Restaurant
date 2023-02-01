@@ -1,6 +1,7 @@
 import Navbar from "../Comonent/User/Navbar/Nav";
 import Review from "../Comonent/User/Review/Review";
 import ReviewForm from "../Comonent/User/Review/ReviewForm";
+import FooterComponent from '../Comonent/User/Footer/Footer'
 
 function Services() {
     return (
@@ -14,6 +15,7 @@ function Services() {
             <Review />
             <Review />
             <ReviewForm />
+            <FooterComponent />
         </div>
     );
 }

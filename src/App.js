@@ -1,45 +1,58 @@
-// import Banner from "./Comonent/Banner/Banner";
-// import Header from "./Comonent/Banner/header";
-// import Navbar from "./Comonent/Navbar/Nav";
+
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import About from './pages/About';
 import ContactPage from './pages/ContactPage';
-// import ContactUs from "./Comonent/Contact/Contact";
 
 import Home from "./pages/Home";
 import Services from './pages/SuccessStories';
 
-import Footer from "./Comonent/User/Footer/Footer";
-import Admin from './pages/ADMIN/Admin';
-// import LoadingBar from 'react-top-loading-bar';
-// // import { useState } from 'react';
+import AdminBanner from './pages/ADMIN/AdminBanner'
+import CreateBanner from './pages/ADMIN/AdminCreateBanner'
+import EditBanner from './pages/ADMIN/AdminEditBanner';
+import AdminContactIndex from './pages/ADMIN/AdminContactPage';
+import EditContact from './pages/ADMIN/AdminEditContact';
+import AdminServices from './Comonent/Admin/Component/Service/AdminServices';
+import AdminServicesIndex from './pages/ADMIN/AdminServicesPage';
+import AdminEditServicesIndex from './pages/ADMIN/AdminEditServicesPage';
+import AdminDetailServicesIndex from './pages/ADMIN/AdminDetailServicesPage';
+import AdminCreateServicesIndex from './pages/ADMIN/AdminCreateServicesPage';
+import AdminReviewIndex from './pages/ADMIN/AdminReviewPage.';
+import AdminCreateReviewIndex from './pages/ADMIN/AdminReviewCreatePage';
+import AdminDetailReviewIndex from './pages/ADMIN/AdminReviewDetailPage';
+import AdminEditReviewIndex from './pages/ADMIN/AdminReviewEditPage';
+
 function App() {
-  // const [progress, setProgress] = useState(0)
 
   return (
     <div>
-      {/* <div className="backImg">
-        <Navbar />
-      </div>
-      <ContactUs />
-      <Footer /> */}
-      {/* <LoadingBar
-        color='#f11946'
-        progress={progress}
-        height={4}
-        onLoaderFinished={() => setProgress(100)}
-      /> */}
+
       <Routes>
-      
-      <Route path='/Admin' element={<Admin />} />
+
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/success' element={<Services />} />
+        <Route path='/Admin' element={<AdminBanner />} />
+        <Route path='/Admin/BannerEdit' element={<EditBanner />} />
+        <Route path='/Admin/CreateBanner' element={<CreateBanner />} />
+        <Route path='/Admin/Contact' element={<AdminContactIndex />} />
+        <Route path='/Admin/Contact/ContactEdit' element={<EditContact />} />
+        <Route path='/Admin/Services' element={<AdminServicesIndex />} />
+        <Route path='/Admin/Services/EditServices' element={<AdminEditServicesIndex />} />
+        <Route path='Admin/Services/DetailServices' element={<AdminDetailServicesIndex />} />
+        <Route path='/Admin/Services/CreateServices' element={<AdminCreateServicesIndex />} />
+        <Route path='/Admin/Reviews' element={<AdminReviewIndex />} />
+        <Route path='/Admin/Reviews/CreateReview' element={<AdminCreateReviewIndex />} />
+        <Route path='/Admin/Review/DetailReview' element={<AdminDetailReviewIndex />} />
+        <Route path='/Admin/Review/EditReview' element={<AdminEditReviewIndex />} />
+
+
+
+
+
+        
       </Routes>
-      <Footer />
-      {/* <Home /> */}
     </div>
   );
 }

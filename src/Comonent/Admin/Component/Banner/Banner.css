@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.create_banner_container {}
+
+.create_banner_container form {
+    padding: 1rem 2rem;
+
+}
+
+.create_banner_container form button {
+    margin-top: 2rem;
+}
+
+.banner_flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 0.5rem 0;
+}
+
+.banner_flex label {
+    letter-spacing: 0.7px;
+    min-width: 120px;
+    width: 120px;
+    font-family: 'Merriweather', serif;
+
+}
+
+.banner_flex input {
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 2rem;
+    border: 1px solid gray;
+    outline: none;
+    letter-spacing: 0.7px;
+}
