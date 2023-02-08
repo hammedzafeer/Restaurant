@@ -92,3 +92,6 @@ nav {
         padding: 10px 5px !important;
     }
 }
+.imgHide{
+    display: none !important;
+}

@@ -80,7 +80,7 @@ function BannerEdit() {
                             <label htmlFor="mobileBanner">Upload Mobile Picture</label>
                             <input type="file" id='mobileBanner' />
                         </div>
-                        <div className="banner_flex">
+                        <div className="banner_flex flex_status">
                             <label htmlFor="status">status</label>
                             <input type="checkbox" checked={status} id='status' style={{ width: "auto" }} onChange={handleStatus} />
                         </div>

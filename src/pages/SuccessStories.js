@@ -2,10 +2,12 @@ import Navbar from "../Comonent/User/Navbar/Nav";
 import Review from "../Comonent/User/Review/Review";
 import ReviewForm from "../Comonent/User/Review/ReviewForm";
 import FooterComponent from '../Comonent/User/Footer/Footer'
+import Progress from "../Comonent/User/ProgressBar/progress";
 
 function Services() {
     return (
-        <div>
+        <>
+        <Progress />
             <Navbar />
             <div className="about_heading review_heading">
                 <h3>Success Stories</h3>
@@ -16,7 +18,7 @@ function Services() {
             <Review />
             <ReviewForm />
             <FooterComponent />
-        </div>
+        </>
     );
 }
 

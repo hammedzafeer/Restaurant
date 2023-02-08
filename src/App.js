@@ -12,7 +12,7 @@ import CreateBanner from './pages/ADMIN/AdminCreateBanner'
 import EditBanner from './pages/ADMIN/AdminEditBanner';
 import AdminContactIndex from './pages/ADMIN/AdminContactPage';
 import EditContact from './pages/ADMIN/AdminEditContact';
-import AdminServices from './Comonent/Admin/Component/Service/AdminServices';
+// import AdminServices from './Comonent/Admin/Component/Service/AdminServices';
 import AdminServicesIndex from './pages/ADMIN/AdminServicesPage';
 import AdminEditServicesIndex from './pages/ADMIN/AdminEditServicesPage';
 import AdminDetailServicesIndex from './pages/ADMIN/AdminDetailServicesPage';
@@ -21,37 +21,48 @@ import AdminReviewIndex from './pages/ADMIN/AdminReviewPage.';
 import AdminCreateReviewIndex from './pages/ADMIN/AdminReviewCreatePage';
 import AdminDetailReviewIndex from './pages/ADMIN/AdminReviewDetailPage';
 import AdminEditReviewIndex from './pages/ADMIN/AdminReviewEditPage';
+import AdminLogin from './Comonent/Admin/Component/Login/Login';
+import Apply from './pages/Apply';
+import NoPage from './pages/NoPage';
+import AdminListIndex from './pages/ADMIN/AdminRestaurantListPage';
 
 function App() {
 
   return (
     <div>
-
+      {/* exect */}
       <Routes>
+        <Route exect path='/' element={<Home />} />
+        <Route exect index element={<Home />} />
+        <Route exect path='/home' element={<Home />} />
+        <Route exect path='/about' element={<About />} />
+        <Route exect path='/contact' element={<ContactPage />} />
+        <Route exect path='/success' element={<Services />} />
+        <Route exect path='/apply' element={<Apply />} />
+        <Route exect path='/home/Admin' element={<AdminBanner />} />
+        <Route exect path='/Admin' element={<AdminBanner />} />
+        <Route exect path='/Admin/BannerEdit' element={<EditBanner />} />
+        <Route exect path='/Admin/CreateBanner' element={<CreateBanner />} />
+        <Route exect path='/Admin/Contact' element={<AdminContactIndex />} />
+        <Route exect path='/Admin/Contact/ContactEdit' element={<EditContact />} />
+        <Route exect path='/Admin/Services' element={<AdminServicesIndex />} />
+        <Route exect path='/Admin/Services/EditServices' element={<AdminEditServicesIndex />} />
+        <Route exect path='Admin/Services/DetailServices' element={<AdminDetailServicesIndex />} />
+        <Route exect path='/Admin/Services/CreateServices' element={<AdminCreateServicesIndex />} />
+        <Route exect path='/Admin/Reviews' element={<AdminReviewIndex />} />
+        <Route exect path='/Admin/Reviews/CreateReview' element={<AdminCreateReviewIndex />} />
+        <Route exect path='/Admin/Review/DetailReview' element={<AdminDetailReviewIndex />} />
+        <Route exect path='/Admin/Review/EditReview' element={<AdminEditReviewIndex />} />
+        <Route exect path='/Admin/Login' element={<AdminLogin />} />
+        <Route exect path='/Admin/Restaurantlist' element={<AdminListIndex />} />
 
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<ContactPage />} />
-        <Route path='/success' element={<Services />} />
-        <Route path='/Admin' element={<AdminBanner />} />
-        <Route path='/Admin/BannerEdit' element={<EditBanner />} />
-        <Route path='/Admin/CreateBanner' element={<CreateBanner />} />
-        <Route path='/Admin/Contact' element={<AdminContactIndex />} />
-        <Route path='/Admin/Contact/ContactEdit' element={<EditContact />} />
-        <Route path='/Admin/Services' element={<AdminServicesIndex />} />
-        <Route path='/Admin/Services/EditServices' element={<AdminEditServicesIndex />} />
-        <Route path='Admin/Services/DetailServices' element={<AdminDetailServicesIndex />} />
-        <Route path='/Admin/Services/CreateServices' element={<AdminCreateServicesIndex />} />
-        <Route path='/Admin/Reviews' element={<AdminReviewIndex />} />
-        <Route path='/Admin/Reviews/CreateReview' element={<AdminCreateReviewIndex />} />
-        <Route path='/Admin/Review/DetailReview' element={<AdminDetailReviewIndex />} />
-        <Route path='/Admin/Review/EditReview' element={<AdminEditReviewIndex />} />
+        <Route exect path='*' element={<NoPage />} />
 
 
 
 
 
-        
+
       </Routes>
     </div>
   );

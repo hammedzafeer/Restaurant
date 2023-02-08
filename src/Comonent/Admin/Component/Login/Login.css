@@ -1,0 +1,86 @@
+.admin_login_container{
+    color: #fff;
+    /* background: red; */
+    background-image: url('../../../../Img/back1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* max-height: 100vh; */
+    /* min-width: 100%; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.admin_login_content{
+    width: 360px;
+    background: #86a7c3;
+    height: auto;
+    /* display: flex; */
+    border-radius: 25px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.admin_login_img{
+
+}
+.admin_login_img img{
+    width: 300px;
+}
+.login_form {
+
+}
+.login_form_content{
+    margin: 15px 0;
+
+}
+.login_form_content ion-icon{
+    font-size: 22px;
+
+}
+.login_form_content input{
+    /* font-size: 18px; */
+    padding: 5px 0;
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 20px;   
+}
+.login_form_content input::placeholder{
+    color: #fff;
+
+}
+.admin_login_content .user{
+    border-bottom: 1px solid #fff;
+
+}
+.admin_login_content .password{
+    border-bottom: 1px solid #fff;
+
+}
+#remember{
+    padding: 0;
+    margin: 0 0 0 4px;
+}
+.admin_login_content label{
+    padding-left: 22px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+}
+.admin_login_container button{
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}

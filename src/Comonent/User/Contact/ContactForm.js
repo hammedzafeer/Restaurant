@@ -1,3 +1,4 @@
+import City from '../../Cities/Cities';
 import './ContactForm.css'
 
 
@@ -69,8 +70,10 @@ function ContactForm() {
         console.log("OK")
         e.preventDefault();
     }
+    // const city = ["Rawalpindi", "Islamabad", "Lahore", "Karachi"]
+    // console.log(city);
     return (
-        <div className="container">
+        <div className="contact_form_container">
             <div className="contant">
 
                 <form className="form-contant" onSubmit={handleSubmit}>
@@ -113,17 +116,27 @@ function ContactForm() {
                             </div>
                             <div className="col-6">
                                 <select name="" id="" required>
+                                {/* <input type="search" name="" id="" /> */}
                                     <option value="Chef" >List of City</option>
+                                    <City />
                                 </select>
                                 <span></span>
                                 <label htmlFor="service" className="genderLabel">City</label>
                             </div>
-        
+                            {/* <div className="col-6">
+                                <input list='browser' />
+                                <datalist id='browser'>
+                                    <City />
+                                </datalist>
+                                <span></span>
+                                <label htmlFor="service" className="genderLabel">City</label>
+                            </div> */}
+
                         </div>
 
                         <div className="flex">
                             <div className="col-12">
-                            <textarea style={{height: "36px"}} name="" id="" className="focus valid" required></textarea>
+                                <textarea style={{ height: "36px" }} name="" id="" className="focus valid" required></textarea>
                                 <span></span>
                                 <label htmlFor="">Message</label>
                             </div>

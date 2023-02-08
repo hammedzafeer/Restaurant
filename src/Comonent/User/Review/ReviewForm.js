@@ -72,7 +72,7 @@ function ReviewForm() {
                         <div><input type="text" name="" id="" placeholder="Enter your name" required /></div>
                         <div><input type="text" name="" id="" placeholder="Enter your email" required /></div>
                         <div><textarea name="" id="" cols="30" rows="10" placeholder="Enter your review about this business" required></textarea></div>
-                        <div><button type="submit">Add Review</button></div>
+                        <div><button className="btn" type="submit">Add Review</button></div>
                     </form>
                 </div>
             </div>

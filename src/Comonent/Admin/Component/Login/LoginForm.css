@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --black: #000;
+  --black1: #333;
+  --form: #999;
+  --white-text: #fff;
+  --white: #e5e5e5;
+  --transition: all 0.7s ease;
+  --blue: #287bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  letter-spacing: 0.7px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--black1);
+  font-size: 20px;
+}
+
+.form_container {
+  position: relative;
+  width: 100%;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: var(--transition);
+  overflow: hidden;
+}
+.navigation.active {
+  width: 75px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.active {
+  background: var(--white);
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: var(--white-text);
+}
+.navigation ul li:hover a,
+.navigation ul li.active a {
+  color: var(--black1);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.65em;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  pad: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.active a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.active a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+/* ===== Dashboard Mein Contant Start ===== */
+.main-contant {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: var(--transition);
+}
+.main-contant.active {
+  width: calc(100% - 65px);
+  left: 65px;
+}
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+}
+.toggle {
+  position: relative;
+  font-size: 2.5em;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle ion-icon {
+  font-size: 0.8em;
+}
+.admin img {
+  width: 50px;
+}
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.search label {
+  width: 100%;
+  position: relative;
+}
+.search label input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  /* padding-left: 40px; */
+  border-radius: 40px;
+  outline: none;
+  border: 1px solid var(--black1);
+  margin: 0;
+
+}
+.search label i {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+
+  right: 15px;
+  font-size: 1rem;
+}
+.admin {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.admin img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+@media only screen and (max-width: 991px) {
+  
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main-contant {
+    width: 100%;
+    left: 0;
+  }
+  .main-contant.active {
+    left: 300px;
+  }
+
+}
+@media only screen and (max-width: 480px) {
+  .admin {
+    min-width: 40px;
+  }
+  .heading {
+    font-size: 18px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 100;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 101;
+  }
+  .toggle.active {
+    color: var(--white);
+  }
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+  }
+  .flex-jc {
+    justify-content: center;
+  }
+  .flex-dc {
+    flex-direction: column;
+  }
+  
+  body {
+    max-height: 100vh;
+    width: 100%;
+    background: #86a7c3;
+  }
+  .form_container {
+    color: #fff;
+    /* background: #2ccdff; */
+    /* background-image: url(../Image/back1.jpg); */
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+  }
+  .adminLog {
+    background: #86a7c3;
+    width: 360px;
+    height: auto;
+    border-radius: 25px;
+  }
+  @keyframes animation{
+    0%{
+      scale: 0;
+    }
+    100%{
+      scale: 1;
+    }
+  }
+  .login-img img {
+    width: 300px;
+  }
+  form .form-login {
+    margin: 15px 0;
+  
+  }
+  form .form-login input {
+    padding: 5px 0;
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 20px;
+  }
+  form .username {
+    border-bottom: 1px solid #fff;
+  }
+  
+  form .password {
+    border-bottom: 1px solid #fff;
+  }
+  form .password input {
+    margin-left: 22px;
+  }
+  form .remember label {
+    padding-left: 22px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+  }
+  form .remember input {
+    padding: 0;
+    margin: 0;
+  }
+  form button{
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  ::placeholder{
+    color: #fff;
+  }

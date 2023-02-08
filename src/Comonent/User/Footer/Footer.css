@@ -6,7 +6,9 @@
     --back-1-color: rgba(48, 48, 48, 0.8);
     --transition: 0.7s ease-in-out;
 }
-
+ul{
+    padding: 0 !important;
+}
 
 
 
@@ -71,6 +73,8 @@ footer .footer_4 {
 
 .footer_heading {
     margin-bottom: 20px;
+    font-size: 1.3rem;
+
 }
 
 
@@ -131,6 +135,8 @@ footer .footer_6 {
 .footer_text {
     text-align: center;
     letter-spacing: 1.5px;
+    margin-bottom: 0 !important;
+
 }
 
 

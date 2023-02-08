@@ -107,7 +107,7 @@ function AdminContact() {
                                     <td>{element.name}</td>
                                     <td>{element.contact}</td>
                                     <td style={{ minWidth: "250px" }}>{element.email}</td>
-                                    <td style={{ minWidth: "400px" }}>{element.message}</td>
+                                    <td className="linehight" style={{ minWidth: "400px" }}>{element.message}</td>
                                     <td>{element.date}</td>
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>

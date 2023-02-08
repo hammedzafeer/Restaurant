@@ -10,8 +10,8 @@ function AboutComponenet() {
     return (
             <div className="about_content">
                 <div className="about_heading">
-                    <h2>Catering</h2>
-                    <p>please call at least 24 hours in advance for catering orders</p>
+                    <h2>About Us</h2>
+                    <p>Providig Restaurant Staff Services All Over Pakistan</p>
                 </div>
                 <div className="about_card_container">
                     <div className="about_card">

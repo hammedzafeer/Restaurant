@@ -1,0 +1,10 @@
+.apply_container{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

@@ -91,7 +91,7 @@ function AdminEditReview() {
                             <label htmlFor="Date">Date Time</label>
                             <input type="datetime-local" id='Date' onChange={handleDate} value={date} />
                         </div>
-                        <div className="banner_flex">
+                        <div className="banner_flex flex_status">
                             <label htmlFor="status">status</label>
                             <input type="checkbox" checked={status} id='status' style={{ width: "auto" }} onChange={handleStatus} />
                         </div>

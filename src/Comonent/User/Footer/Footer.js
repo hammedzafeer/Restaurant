@@ -12,7 +12,7 @@ function FooterComponent() {
                         <div className="musicology">
                             <h2 className="footer_heading">RESTAURANT</h2>
                             <p className="text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim enim.
+                               Providig Restaurant Staff Services All Over Pakistan
                             </p>
                             <ul className="icon flex">
                                 <li><i className="fab fa-instagram"></i></li>
@@ -32,10 +32,10 @@ function FooterComponent() {
                         <div className="footer_3">
                             <h2 className="footer_heading">Services</h2>
                             <ul>
-                                <li>Chef</li>
-                                <li>Waiter</li>
-                                <li>Restaurant Manager</li>
-                                <li>Dish washer</li>
+                                <li><Link to="/about">Chef</Link></li>
+                                <li><Link to="/about">Waiter</Link></li>
+                                <li><Link to="/about">Restaurant Manager</Link></li>
+                                <li><Link to="/about">Dish washer</Link></li>
                             </ul>
 
                         </div>

@@ -44,6 +44,7 @@
 
 .review_item_detail .review_name {
     font-family: 'Merriweather', serif;
+    font-size: inherit;
 
 }
 

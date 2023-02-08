@@ -74,7 +74,7 @@ function AdminServices() {
                                 return <tr key={index}>
                                     <td>{element.Id}</td>
                                     <td style={{ minWidth: "400px" }}>{element.name}</td>
-                                    <td style={{ minWidth: "400px" }}>{element.image}</td>
+                                    <td className="linehight" style={{ minWidth: "400px" }}>{element.image}</td>
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>
                                         <ul>

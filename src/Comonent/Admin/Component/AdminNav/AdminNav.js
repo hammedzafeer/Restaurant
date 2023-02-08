@@ -41,7 +41,7 @@ function AdminNav(props) {
                     <li className={`${props.Banner}`} onClick={handleClick}>
                         <Link to="/Admin">
                             <span className="icon">
-                            <ion-icon name="home-outline"></ion-icon>
+                                <ion-icon name="home-outline"></ion-icon>
                             </span>
                             <span className="title">Banners</span>
                         </Link>
@@ -79,8 +79,18 @@ function AdminNav(props) {
                     </li>
                     {/* <!-- ===== Menu Item End ===== --> */}
                     {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.list}`} onClick={handleClick}>
+                        <Link to="/Admin/Restaurantlist">
+                            <span className="icon">
+                                <ion-icon name="list-outline"></ion-icon>
+                            </span>
+                            <span className="title">RestaurantList</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
                     <li className={`${props.SignOut}`} onClick={handleClick}>
-                        <Link to="/">
+                        <Link to="/Admin/Login">
                             <span className="icon">
                                 <ion-icon name="log-out-outline"></ion-icon>
                             </span>

@@ -94,7 +94,7 @@ function AdminReviews
                                     <td>{element.Id}</td>
                                     <td>{element.name}</td>
                                     <td>{element.email}</td>
-                                    <td style={{ minWidth: "400px" }}>{element.comment}</td>
+                                    <td className="linehight" style={{ minWidth: "400px" }}>{element.comment}</td>
                                     <td>{element.star}</td>
                                     <td>{new Date(element.dateTime).toLocaleDateString()} - {new Date(element.dateTime).toLocaleTimeString()}</td>
                                     <td><span className={`status ${element.status}`}>{element.status}</span></td>

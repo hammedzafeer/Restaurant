@@ -1,0 +1,32 @@
+/* .carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    background: black;
+    padding: 20px;
+    border-radius: 50%;
+} */
+.slider_Img{
+    width: 100%!important;
+    height: 80vh;   
+}
+.carousel-fade .carousel-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-control-next, .carousel-control-prev{
+    /* background-color: #a9a9a9; */
+}
+@media screen and (max-width: 990px) {
+    .slider_Img{
+        width: 100%!important;
+        height: auto;   
+    }
+    .carousel-control-next, .carousel-control-prev{
+        background: 0 0;
+    }
+}

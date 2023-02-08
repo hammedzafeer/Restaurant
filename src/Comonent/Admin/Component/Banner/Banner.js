@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -50,6 +50,12 @@ function Banner() {
         })
     }
 
+    const example = (id, name, date) => {
+        console.log(id);
+        console.log(name);
+        console.log(date);
+
+    }
  
     return (
         <>
@@ -88,7 +94,7 @@ function Banner() {
                                         <ul>
                                             <li className="user-active"><Link to="/">Active</Link></li>
                                             <li id={element.Id}><Link to='/Admin/BannerEdit' onClick={handleBanner}>Edit</Link></li>
-                                            {/* <li id={element.Id}><a onClick={handleBanner}>Edit</a></li> */}
+                                            {/* <li id={element.Id}><a onClick={() => example(element.Id, element.bannerName,element.bannerDate)}>Example</a></li> */}
                                             <li><Link to="/">Delete</Link></li>
                                         </ul>
                                     </span>
