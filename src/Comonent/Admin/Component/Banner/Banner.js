@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 
 
 function Banner() {
+    const data = { username: 'example' };
+
+    fetch('http://144.91.86.203/apiresturant/Restaurants/create', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     const Banner = [
         {
             Id: "0",
@@ -56,7 +72,7 @@ function Banner() {
         console.log(date);
 
     }
- 
+
     return (
         <>
             {/* <!-- ====== Datalist Items Start ====== --> */}

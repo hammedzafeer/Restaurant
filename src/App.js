@@ -24,7 +24,17 @@ import AdminEditReviewIndex from './pages/ADMIN/AdminReviewEditPage';
 import AdminLogin from './Comonent/Admin/Component/Login/Login';
 import Apply from './pages/Apply';
 import NoPage from './pages/NoPage';
-import AdminListIndex from './pages/ADMIN/AdminRestaurantListPage';
+import AdminRestaurantListIndex from './pages/ADMIN/AdminRestaurantListPage';
+import AdminCustomerListIndex from './pages/ADMIN/AdminCustomersListPage';
+import RestaurantCreateIndex from './pages/ADMIN/AdminRestaurantCreatePage';
+import AdminRestaurantItemIndex from './pages/ADMIN/ListAdminItem';
+import AdminRestaurantOrderIndex from './pages/ADMIN/Admin Order/ListAdminOrder';
+import AdminNewOrderIndex from './pages/ADMIN/Admin Order/AdminNewOrderIndex';
+import AdminOrderInProgressIndex from './pages/ADMIN/Admin Order/AdminOrderInProIndex';
+import AdminWaitingRiderIndex from './pages/ADMIN/Admin Order/AdminWaitingRiderIndex';
+import AdminOrderCompeleteIndex from './pages/ADMIN/Admin Order/AdminOrderCompeleteIndex';
+import AdminCencelledOrderIndex from './pages/ADMIN/Admin Order/AdminCencelledOrderIndex';
+import AdminOrderOnTheWayIndex from './pages/ADMIN/Admin Order/AdminOrderOnTheWayIndex';
 
 function App() {
 
@@ -54,7 +64,21 @@ function App() {
         <Route exect path='/Admin/Review/DetailReview' element={<AdminDetailReviewIndex />} />
         <Route exect path='/Admin/Review/EditReview' element={<AdminEditReviewIndex />} />
         <Route exect path='/Admin/Login' element={<AdminLogin />} />
-        <Route exect path='/Admin/Restaurantlist' element={<AdminListIndex />} />
+        <Route exect path='/Admin/Restaurantlist' element={<AdminRestaurantListIndex />} />
+        <Route exect path='/Admin/RestaurantCreate' element={<RestaurantCreateIndex />} />
+
+        <Route exect path='/Admin/Customerslist' element={<AdminCustomerListIndex />} />
+
+        <Route exect path='/Admin/Itemlist' element={<AdminRestaurantItemIndex />} />
+
+        <Route exect path='/Admin/OrderList' element={<AdminRestaurantOrderIndex />} />
+        <Route exect path='/Admin/OrderList/NewOrder' element={<AdminNewOrderIndex />} />
+        <Route exect path='/Admin/OrderList/OrderInPro' element={<AdminOrderInProgressIndex />} />
+        <Route exect path='/Admin/OrderList/WaitingRider' element={<AdminWaitingRiderIndex />} />
+        <Route exect path='/Admin/OrderList/Orderontheway' element={<AdminOrderOnTheWayIndex />} />
+        <Route exect path='/Admin/OrderList/OrderInPro' element={<AdminOrderInProgressIndex />} />
+        <Route exect path='/Admin/OrderList/CompeleteOrder' element={<AdminOrderCompeleteIndex />} />
+        <Route exect path='/Admin/OrderList/CancelOrder' element={<AdminCencelledOrderIndex />} />
 
         <Route exect path='*' element={<NoPage />} />
 

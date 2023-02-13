@@ -117,7 +117,7 @@ function ContactForm() {
                             <div className="col-6">
                                 <select name="" id="" required>
                                 {/* <input type="search" name="" id="" /> */}
-                                    <option value="Chef" >List of City</option>
+                                    <option value="list" >List of City</option>
                                     <City />
                                 </select>
                                 <span></span>

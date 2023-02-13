@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.orderItem_Container{
+    display: flex;
+    justify-content: center;
+}
+.orderItem_Cotent{
+    width: 400px;
+    box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+    background: #645964;
+}
+.orderItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: black;
+    margin: 1rem;
+    box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+}
+.orderItem h5{
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.orderItem p{
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+
+}

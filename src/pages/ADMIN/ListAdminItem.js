@@ -3,19 +3,19 @@ import '../../Comonent/Admin/Component/Admin/Admin.css'
 import '../../Comonent/Admin/Component/Admin/utilty.css'
 
 import AdminNav from '../../Comonent/Admin/Component/AdminNav/AdminNav'
-import AdminRestaurantList from '../../Comonent/Admin/Component/AdminRestaurantList/AdminRestaurantList';
+import AdminRestaurantItem from '../../Comonent/Admin/Component/AdminRestaurantItem/AdminRestaurantItem';
 import MainAdmin from '../../Comonent/Admin/Component/Main/AdminMain'
     
-function AdminRestaurantListIndex() {
+function AdminRestaurantItemIndex() {
     return (
         <>
-            <AdminNav Dashboard="" Banner="" Contact="" Services="" Reviews="" SignOut="" list="active"/>
+            <AdminNav Dashboard="" Banner="" Contact="" Services="" Reviews="" SignOut="" list="" Itemlist="active"/>
             <div className="main-contant">
                 <MainAdmin />
-                <AdminRestaurantList />
+                <AdminRestaurantItem />
             </div>
         </>
     );
 }
 
-export default AdminRestaurantListIndex;
+export default AdminRestaurantItemIndex;

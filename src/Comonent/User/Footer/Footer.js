@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './Footer.css'
 
 function FooterComponent() {
+    const d = new Date();
+    let year = d.getFullYear();
+
     return (
         <div>
 
@@ -12,7 +15,7 @@ function FooterComponent() {
                         <div className="musicology">
                             <h2 className="footer_heading">RESTAURANT</h2>
                             <p className="text">
-                               Providig Restaurant Staff Services All Over Pakistan
+                                Providig Restaurant Staff Services All Over Pakistan
                             </p>
                             <ul className="icon flex">
                                 <li><i className="fab fa-instagram"></i></li>
@@ -50,7 +53,7 @@ function FooterComponent() {
                         </div>
                     </div>
                 </div>
-                <p className="footer_text text">Copyright &copy; | All Right Reserved</p>
+                <p className="footer_text text">Copyright &copy; [{year}] | All Right Reserved</p>
 
             </footer>
         </div>

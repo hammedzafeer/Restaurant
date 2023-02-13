@@ -82,12 +82,43 @@ function AdminNav(props) {
                     <li className={`${props.list}`} onClick={handleClick}>
                         <Link to="/Admin/Restaurantlist">
                             <span className="icon">
-                                <ion-icon name="list-outline"></ion-icon>
+                                <ion-icon name="restaurant-outline"></ion-icon>
                             </span>
                             <span className="title">RestaurantList</span>
                         </Link>
                     </li>
                     {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.Customerslist}`} onClick={handleClick}>
+                        <Link to="/Admin/Customerslist">
+                            <span className="icon">
+                                <ion-icon name="list-outline"></ion-icon>
+                            </span>
+                            <span className="title">CustomersList</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.Itemlist}`} onClick={handleClick}>
+                        <Link to="/Admin/ItemList">
+                            <span className="icon">
+                                <ion-icon name="pricetag-outline"></ion-icon>
+                            </span>
+                            <span className="title">Item List</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.orderList}`} onClick={handleClick}>
+                        <Link to="/Admin/OrderList">
+                            <span className="icon">
+                                <ion-icon name="reorder-four-outline"></ion-icon>
+                            </span>
+                            <span className="title">OrderList</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+
                     {/* <!-- ===== Menu Item Start ===== --> */}
                     <li className={`${props.SignOut}`} onClick={handleClick}>
                         <Link to="/Admin/Login">

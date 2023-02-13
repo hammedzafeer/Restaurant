@@ -30,12 +30,9 @@ function SliderBanner() {
                     <img
                         className="d-block slider_Img"
                         src={element.img}
-                        alt={`Image ${index}`}
+                        alt={`SlideImages ${index}`}
                     />
                 </Carousel.Item>
-                {/* if (element.status === "active") { */ }
-
-                {/* } */ }
             })}
 
         </Carousel>
@@ -43,9 +40,3 @@ function SliderBanner() {
 }
 
 export default SliderBanner;
-
-{/* <Carousel.Caption>
-<h3>First slide label</h3>
-<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-</Carousel.Caption>
-</Carousel.Item> */}

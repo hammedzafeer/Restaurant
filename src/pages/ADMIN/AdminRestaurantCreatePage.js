@@ -1,21 +1,20 @@
-
-import '../../Comonent/Admin/Component/Admin/Admin.css'
+import  '../../Comonent/Admin/Component/Admin/Admin.css'
 import '../../Comonent/Admin/Component/Admin/utilty.css'
 
 import AdminNav from '../../Comonent/Admin/Component/AdminNav/AdminNav'
-import AdminRestaurantList from '../../Comonent/Admin/Component/AdminRestaurantList/AdminRestaurantList';
+import RestaurantCreate from '../../Comonent/Admin/Component/AdminRestaurantList/RestaurantCreate';
 import MainAdmin from '../../Comonent/Admin/Component/Main/AdminMain'
-    
-function AdminRestaurantListIndex() {
+
+function RestaurantCreateIndex() {
     return (
         <>
             <AdminNav Dashboard="" Banner="" Contact="" Services="" Reviews="" SignOut="" list="active"/>
             <div className="main-contant">
                 <MainAdmin />
-                <AdminRestaurantList />
+                <RestaurantCreate />
             </div>
         </>
     );
 }
 
-export default AdminRestaurantListIndex;
+export default RestaurantCreateIndex;
