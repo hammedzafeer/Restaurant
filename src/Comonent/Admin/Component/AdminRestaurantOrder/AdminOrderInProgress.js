@@ -2,36 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Orders } from "./OrderApi";
 function AdminOrderInProgress() {
-
-    // // console.log(Orders);
-    const handleContact = (e) => {
-        // let ID = e.target.parentElement.id;
-        // console.log(ID);
-        // Contact.map((element) => {
-        //     if (ID == element.Id) {
-        //         let contactEdit = localStorage.getItem("Contacts");
-        //         let contactObj = [];
-        //         if (contactEdit == null) {
-        //             contactObj = [];
-        //         }
-        //         else {
-        //             contactObj = [];
-        //             localStorage.setItem("Contacts", JSON.stringify(contactObj))
-        //         }
-        //         let contactInfo = {
-        //             id: element.Id,
-        //             sName: element.serviceName,
-        //             name: element.name,
-        //             contact: element.contact,
-        //             email: element.email,
-        //             message: element.message
-        //         }
-        //         contactObj.push(contactInfo)
-        //         localStorage.setItem("Contacts", JSON.stringify(contactObj))
-        //         console.log(contactObj);
-        //     }
-        // })
-    }
     return (
         <>
             <section className="details" id="contact">
@@ -45,7 +15,7 @@ function AdminOrderInProgress() {
                     <table>
                         <thead>
                             <tr>
-                                <td>Id</td>
+                                <td>Action</td>
                                 <td>OrderId</td>
                                 <td>Price</td>
                                 <td>Name</td>
@@ -62,7 +32,7 @@ function AdminOrderInProgress() {
                             {Orders.map((element, index) => {
                                 if (element.orderStatus == "i") {
                                     return <tr key={index}>
-                                        <td>{index}</td>
+                                        <td><a className="btn">{element.orderStatus == "w" ? "Accept" : "Send Job"}</a></td>
                                         <td>{element.orderId}</td>
                                         <td>{element.productsAmount + element.deliveryCharges + element.tax}</td>
                                         <td>{element.customer.name}</td>
@@ -79,10 +49,10 @@ function AdminOrderInProgress() {
                                             <ul>
                                                 <li className="user-active"><Link to="/">Active</Link></li>
 
-                                                <li id={element.Id}><Link to='/Admin/Contact/ContactEdit' onClick={handleContact}>Edit</Link></li>
+                                                {/* <li id={element.Id}><Link to='/Admin/Contact/ContactEdit' onClick={handleContact}>Edit</Link></li> */}
                                                 {/* <li id={element.Id}><a onClick={handleContact}>Edit</a></li> */}
 
-                                                <li><Link to="/">Delete</Link></li>
+                                                {/* <li><Link to="/">Delete</Link></li> */}
                                             </ul>
                                         </span>
                                         </td>

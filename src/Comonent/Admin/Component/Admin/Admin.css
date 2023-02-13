@@ -78,6 +78,13 @@ body {
   cursor: pointer;
 }
 
+.details table tbody tr:hover .btn,
+.details table tbody tr.active .btn{
+  background: gray;
+  color: var(--white-text);
+  cursor: pointer;
+}
+
 .details table tr td {
   padding: 10px;
   min-width: 200px;
