@@ -7,7 +7,7 @@ function AdminRestaurantList() {
     const [restaurant, setRestaurant] = useState([])
     const Contact = []
     async function RestaurantApi() {
-        axios.get("http://144.91.86.203/apiresturant/Restaurants")
+        axios.get("https://localhost:44305/Restaurants")
         .then((res) => 
         console.log(res))
     }

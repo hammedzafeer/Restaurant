@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DateObj from "../DateObj/Date";
 
 function AdminReviews
     () {
@@ -9,7 +10,7 @@ function AdminReviews
             email: "test@gmail.com",
             comment: "I would recommend this agency to anyone . Very professional and reliable consultants. They are quick to respond to messages and queries.",
             star: "4",
-            dateTime: "2023-02-01T02:39",
+            dateTime: "2023-05-14T14:51:38.4904471+00:00",
             status: "Active",
         },
         {
@@ -96,7 +97,8 @@ function AdminReviews
                                     <td>{element.email}</td>
                                     <td className="linehight" style={{ minWidth: "400px" }}>{element.comment}</td>
                                     <td>{element.star}</td>
-                                    <td>{new Date(element.dateTime).toLocaleDateString()} - {new Date(element.dateTime).toLocaleTimeString()}</td>
+                                    {/* <td>{new Date(element.dateTime).toLocaleDateString()} - {new Date(element.dateTime).toLocaleTimeString()}</td> */}
+                                    <DateObj Dates={element.dateTime}/>
                                     <td><span className={`status ${element.status}`}>{element.status}</span></td>
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>

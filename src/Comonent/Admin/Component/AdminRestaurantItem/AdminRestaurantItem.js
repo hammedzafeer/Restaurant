@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DateObj from "../DateObj/Date";
 
 function AdminRestaurantItem() {
 
@@ -149,7 +150,8 @@ function AdminRestaurantItem() {
                                     <td><span className="status Active">{element.status.toString()}</span></td>
                                     <td>{element.categry.fkMenuId}</td>
                                     <td>{element.categry.name}</td>
-                                    <td>{element.dateAdded}</td>
+                                    {/* <td>{element.dateAdded}</td> */}
+                                    <DateObj Dates={element.dateAdded} />
                                     <td><span className="status Active">{element.isActive.toString()}</span></td>
 
                                     {/* <!--z dropdown --> */}

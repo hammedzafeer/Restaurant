@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DateObj from "../DateObj/Date";
 import { Orders } from "./OrderApi";
 function AdminOrderCompelete() {
 
@@ -70,7 +71,8 @@ function AdminOrderCompelete() {
                                         <td>{element.customer.contact}</td>
                                         <td style={{ minWidth: "300px" }}>{element.customer.address}</td>
                                         <td>{element.customer.landmark}</td>
-                                        <td>{element.customer.dateAdded}</td>
+                                        {/* <td>{element.customer.dateAdded}</td> */}
+                                        <DateObj Dates={element.customer.dateAdded} />
 
 
 

@@ -112,9 +112,39 @@ function AdminNav(props) {
                     <li className={`${props.orderList}`} onClick={handleClick}>
                         <Link to="/Admin/OrderList">
                             <span className="icon">
-                                <ion-icon name="reorder-four-outline"></ion-icon>
+                                <ion-icon name="apps-outline"></ion-icon>
                             </span>
                             <span className="title">OrderList</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.category}`} onClick={handleClick}>
+                        <Link to="/Admin/Category">
+                            <span className="icon">
+                                <ion-icon name="podium-outline"></ion-icon>
+                            </span>
+                            <span className="title">Category</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.itemvrities}`} onClick={handleClick}>
+                        <Link to="/Admin/ItemVrities">
+                            <span className="icon">
+                                <ion-icon name="reorder-four-outline"></ion-icon>
+                            </span>
+                            <span className="title">Item Vrities</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.rider}`} onClick={handleClick}>
+                        <Link to="/Admin/Rider">
+                            <span className="icon">
+                                <ion-icon name="bicycle-outline"></ion-icon>
+                            </span>
+                            <span className="title">Rider</span>
                         </Link>
                     </li>
                     {/* <!-- ===== Menu Item End ===== --> */}

@@ -59,7 +59,7 @@ function RestaurantCreate() {
         document.getElementsByClassName("selectImg")[0].style.display = "block";
         let Image = URL.createObjectURL(e.target.files[0]);
         setImg(Image)
-        // console.log(Image)
+        console.log(Img)
     }
     useEffect(() => {
         setRestaurantObj({

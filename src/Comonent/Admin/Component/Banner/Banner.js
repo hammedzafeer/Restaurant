@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { Link } from "react-router-dom";
+import DateObj from "../DateObj/Date";
 
 
 function Banner() {
@@ -25,7 +26,7 @@ function Banner() {
             bannerName: "1",
             bannermobileImg: "https://img.freepik.com/free-vector/professional-website-banner-with-blue-shapes_1361-1531.jpg?w=2000",
             bannerwebImg: "https://img.freepik.com/free-vector/modern-website-banner-template-with-abstract-shapes_1361-3311.jpg?w=2000",
-            bannerDate: "15/01/2002",
+            bannerDate: "2023-02-14T10:15:38.4904471+00:00",
             bannerStatus: "Active",
         },
         {
@@ -33,7 +34,7 @@ function Banner() {
             bannerName: "2",
             bannermobileImg: "https://img.freepik.com/free-vector/professional-website-banner-with-blue-shapes_1361-1531.jpg?w=2000",
             bannerwebImg: "https://img.freepik.com/free-vector/modern-website-banner-template-with-abstract-shapes_1361-3311.jpg?w=2000",
-            bannerDate: "15/01/2002",
+            bannerDate: "2023-02-14T10:15:38.4904471+00:00",
             bannerStatus: "Deactive",
         }
     ]
@@ -103,7 +104,8 @@ function Banner() {
                                     <td id="">{element.bannerName}</td>
                                     <td><img src={element.bannermobileImg} alt="" /></td>
                                     <td><img src={element.bannerwebImg} alt="" /></td>
-                                    <td>{element.bannerDate}</td>
+                                    <DateObj Dates={element.bannerDate} />
+                                    {/* <td>{element.bannerDate}</td> */}
                                     <td><span className={`status ${element.bannerStatus}`}>{element.bannerStatus}</span></td>
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>

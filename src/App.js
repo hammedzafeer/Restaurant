@@ -35,6 +35,9 @@ import AdminWaitingRiderIndex from './pages/ADMIN/Admin Order/AdminWaitingRiderI
 import AdminOrderCompeleteIndex from './pages/ADMIN/Admin Order/AdminOrderCompeleteIndex';
 import AdminCencelledOrderIndex from './pages/ADMIN/Admin Order/AdminCencelledOrderIndex';
 import AdminOrderOnTheWayIndex from './pages/ADMIN/Admin Order/AdminOrderOnTheWayIndex';
+import AdminCategoryListIndex from './pages/ADMIN/AdminCategoryListIndex';
+import AdminItemVritiesIndex from './pages/ADMIN/AdminItemVrities/AdminItemVritiesIndex';
+import AdminRiderIndex from './pages/ADMIN/AdminRider/AdminRiderIndex';
 
 function App() {
 
@@ -79,6 +82,10 @@ function App() {
         <Route exect path='/Admin/OrderList/OrderInPro' element={<AdminOrderInProgressIndex />} />
         <Route exect path='/Admin/OrderList/CompeleteOrder' element={<AdminOrderCompeleteIndex />} />
         <Route exect path='/Admin/OrderList/CancelOrder' element={<AdminCencelledOrderIndex />} />
+        <Route exect path='/Admin/Category' element={<AdminCategoryListIndex />} />
+        <Route exect path='/Admin/ItemVrities' element={<AdminItemVritiesIndex />} />
+        <Route exect path='/Admin/Rider' element={<AdminRiderIndex />} />
+
 
         <Route exect path='*' element={<NoPage />} />
 

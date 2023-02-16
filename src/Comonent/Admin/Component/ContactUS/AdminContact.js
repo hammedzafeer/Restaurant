@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import '../Banner/Banner.css'
+import DateObj from "../DateObj/Date";
 
 function AdminContact() {
 
@@ -14,7 +15,7 @@ function AdminContact() {
             contact: "03149019205",
             email: "haseebomare12@gmail.com	",
             message: "I Want To Do Job as Waiter In Restaurant, Cafe,Hotel, At Peshawar Iam An Intermediate I Can Speak in English,Urdu,pashto,Farsi Iam 21 Years Old.",
-            date: "2023-02-1T08:11"
+            date: "2023-02-14T10:11:38.4904471+00:00"
         },
         {
             Id: "1",
@@ -23,7 +24,7 @@ function AdminContact() {
             contact: "03129860097",
             email: "rafiamaryam001@gmail.com",
             message: "I need 2 chefs and 4 waiters",
-            date: "2022-02-13T09:11"
+            date: "2023-02-14T10:15:38.4904471+00:00"
         },
         {
             Id: "2",
@@ -32,7 +33,7 @@ function AdminContact() {
             contact: "03327841513",
             email: "rananawaz_911@yahoo.com",
             message: "Experience 22 years in pizza Hut pizza max pizza crust pizza next",
-            date: "2023-01-13T08:14"
+            date: "2023-02-14T10:15:38.4904471+00:00"
         },
         {
             Id: "3",
@@ -41,7 +42,7 @@ function AdminContact() {
             contact: "03035975265",
             email: "faheemkhankpk92@gmail.com",
             message: "Urgently need jobs",
-            date: " 2021-01-13T08:14"
+            date: "2023-02-14T10:15:38.4904471+00:00"
         }
     ]
 
@@ -108,7 +109,8 @@ function AdminContact() {
                                     <td>{element.contact}</td>
                                     <td style={{ minWidth: "250px" }}>{element.email}</td>
                                     <td className="linehight" style={{ minWidth: "400px" }}>{element.message}</td>
-                                    <td>{element.date}</td>
+                                    {/* <td>{element.date}</td> */}
+                                    <DateObj Dates={element.date} />
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>
                                         <ul>
