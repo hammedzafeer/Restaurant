@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-function RestaurantCreate() {
+function RestaurantEdit() {
     const [file, setFile] = useState();
     const [fileName, setFileName] = useState();
     const [fileObj, setFileObj] = useState();
@@ -62,9 +62,42 @@ function RestaurantCreate() {
     }
 
 
+    let restaurantEdit = localStorage.getItem("RestaurantList");
+    let restaurantObj = [];
+    if (restaurantEdit == null) {
+        restaurantObj = [];
+    }
+    else {
+        restaurantObj = JSON.parse(restaurantEdit)
+        console.log(restaurantObj);
+    };
+
+    //     let restaurantId =  restaurantObj[0].ResId;
+    // console.log(restaurantId);
+    // let fkCityId = 
+    // let name =
+    // let ownerName =
+    // let email =
+    // let primaryContact =
+    // let secondaryContact =
+    // let logo =
+    // let address =
+    // let landMark 
+    const catchData = () => {
+        setrId(restaurantObj[0].restaurantId);
+        setCity(restaurantObj[0].fkCityId)
+        setName(restaurantObj[0].name)
+        setOwnerName(restaurantObj[0].ownerName)
+        setEmail(restaurantObj[0].email)
+        setPContact(restaurantObj[0].primaryContact)
+        setSContact(restaurantObj[0].secondaryContact)
+        setAddress(restaurantObj[0].address)
+        setLandMark(restaurantObj[0].landMark)
 
 
+    }
 
+    console.log(rId);
     const handleImg = (e) => {
         // console.log(e.target.files[0])
         document.getElementsByClassName("selectImg")[0].style.display = "block";
@@ -76,9 +109,18 @@ function RestaurantCreate() {
         console.log(file)
         console.log(fileName)
     }
-    useEffect(() => {
 
+    useEffect(() => {
+        catchData()
+                setFileObj({
+            myImage: file
+        })
+    },[])
+
+
+    const handleCLick = () => {
         setRestaurantObj({
+            restaurantId: rId,
             fkCityId: city,
             name: name,
             ownerName: ownerName,
@@ -89,14 +131,8 @@ function RestaurantCreate() {
             address: address,
             landMark: landMark
         })
-        setFileObj({
-            myImage: file
-        })
-    }, [name, ownerName, email, pContact, sContact, city, address, landMark, Img])
 
-
-    const handleCLick = () => {
-        axios.post('http://144.91.86.203/apiresturant/Restaurants/create', RestaurantObj).then((res) => {
+        axios.post('http://144.91.86.203/apiresturant/Restaurants/UpdateRestaurant', RestaurantObj).then((res) => {
             if (res.status == 200) {
                 let a = document.createElement("a");
                 a.href = "/Admin/Restaurantlist";
@@ -104,17 +140,14 @@ function RestaurantCreate() {
                 console.log(a);
             }
         });
-        // const formData = new FormData();
-        // formData.append("file", file)
-        // axios.post(`http://144.91.86.203/apiresturant/Restaurants/UploadLogo?rId=28&${file}`);
-        // console.log(formData);
+        console.log(restaurantObj);
 
     }
     return (
         <section className="details" >
             <div className="adminDetails">
                 <div className="data-header">
-                    <h2 className="heading">Restaurant List Create</h2>
+                    <h2 className="heading">Restaurant List Update</h2>
                     <Link to="/Admin/Restaurantlist" className="btn">Back</Link>
                 </div>
                 <div className='create_banner_container'>
@@ -161,7 +194,7 @@ function RestaurantCreate() {
                         <div className="selectImg" style={{ display: "none" }}>
                             <img src={Img} alt="" />
                         </div>
-                        <button className='btn' onClick={handleCLick}>Create</button>
+                        <button className='btn' onClick={handleCLick}>Update</button>
                     </form>
                 </div>
             </div>
@@ -169,4 +202,4 @@ function RestaurantCreate() {
     );
 }
 
-export default RestaurantCreate;
+export default RestaurantEdit;

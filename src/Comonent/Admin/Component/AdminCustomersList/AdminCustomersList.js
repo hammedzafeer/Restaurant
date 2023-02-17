@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -5,32 +6,15 @@ function AdminCustomersList() {
 
     const [customers, setCustomers] = useState([])
     const Contact = []
-    async function CustomerApi() {
-        try {
-            const response = await fetch('http://localhost:3456/apiresturant/Customers', {
-                method: 'GET',
-                headers: {
-                    accept: 'application/json',
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error! status`);
-            }
-
-            const result = await response.json();
-            console.log(result);
-            setCustomers(result)
-        } catch (err) {
-            console.log(err);
-        }
+     function CustomerApi() {
+        axios.get('http://144.91.86.203/apiresturant/Customers?rid=0')
+        .then((res) => setCustomers(res.data))
     }
 
 
 
     useEffect(() => {
         CustomerApi()
-        console.log(customers)
     }, [])
 
 
@@ -75,10 +59,10 @@ function AdminCustomersList() {
                     <table>
                         <thead>
                             <tr>
-                                <td>Id</td>
-                                <td>CustomerId</td>
-                                <td>CityId</td>
-                                <td>RestaurantId</td>
+                                {/* <td>Id</td> */}
+                                {/* <td>CustomerId</td> */}
+                                {/* <td>CityId</td> */}
+                                {/* <td>RestaurantId</td> */}
                                 <td>Name</td>
                                 <td>Email</td>
                                 <td>Contact</td>
@@ -92,10 +76,10 @@ function AdminCustomersList() {
                             {/* <!-- Data Item Start --> */}
                             {customers.map((element, index) => {
                                 return <tr key={index}>
-                                    <td>{index}</td>
-                                    <td>{element.customerId}</td>
-                                    <td>{element.fkCityId}</td>
-                                    <td>{element.fkRestaurantId}</td>
+                                    {/* <td>{index}</td> */}
+                                    {/* <td>{element.customerId}</td> */}
+                                    {/* <td>{element.fkCityId}</td> */}
+                                    {/* <td>{element.fkRestaurantId}</td> */}
                                     <td>{element.name}</td>
                                     <td className="linehight" style={{ minWidth: "300px" }}>{element.email}</td>
                                     <td>{element.contact}</td>
@@ -106,9 +90,9 @@ function AdminCustomersList() {
 
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>
-                                        <ul>  
+                                        <ul>
                                             <li className="user-active"><Link to="/">Active</Link></li>
-                                            
+
                                             <li id={element.Id}><Link to='/Admin/Contact/ContactEdit' onClick={handleContact}>Edit</Link></li>
                                             {/* <li id={element.Id}><a onClick={handleContact}>Edit</a></li> */}
 

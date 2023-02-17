@@ -2,48 +2,73 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function AdminRestaurantList() {
+function AdminRestaurantList(props) {
 
     const [restaurant, setRestaurant] = useState([])
     const Contact = []
     async function RestaurantApi() {
-        axios.get("https://localhost:44305/Restaurants")
-        .then((res) => 
-        console.log(res))
+        props.setProgress(20)
+        await axios.get("http://144.91.86.203/apiresturant/Restaurants")
+            .then((res) => {
+                props.setProgress(50)
+                setRestaurant(res.data)
+                props.setProgress(70)
+            })
+        props.setProgress(100)
+        // props.setProgress(10)
+        // let data = await fetch("http://144.91.86.203/apiresturant/Restaurants");
+        // props.setProgress(50)
+        // let response = await data.json(); 
+        // props.setProgress(70)
+        // setRestaurant(response);
+        // props.setProgress(100)
     }
     useEffect(() => {
         RestaurantApi()
 
     }, [])
 
+    // Active Function
+    const handleActive = (Id) => {
+        axios.get(`http://144.91.86.203/apiresturant/Restaurants/IsActive/${Id}`)
+        console.log(Id);
+    }
+    // Delete Function
+    const handleDelete = (Id) => {
+        axios.get(`http://144.91.86.203/apiresturant/Restaurants/DltUser/${Id}`)
+        console.log(`http://144.91.86.203/apiresturant/Restaurants/DltUser/${Id}`);
+        console.log(Id);
+    }
 
-    const handleContact = (e) => {
-        let ID = e.target.parentElement.id;
-        console.log(ID);
-        Contact.map((element) => {
-            if (ID == element.Id) {
-                let contactEdit = localStorage.getItem("Contacts");
-                let contactObj = [];
-                if (contactEdit == null) {
-                    contactObj = [];
-                }
-                else {
-                    contactObj = [];
-                    localStorage.setItem("Contacts", JSON.stringify(contactObj))
-                }
-                let contactInfo = {
-                    id: element.Id,
-                    sName: element.serviceName,
-                    name: element.name,
-                    contact: element.contact,
-                    email: element.email,
-                    message: element.message
-                }
-                contactObj.push(contactInfo)
-                localStorage.setItem("Contacts", JSON.stringify(contactObj))
-                console.log(contactObj);
-            }
-        })
+    const handleResEdit = (ResId, CityId, name, Oname, email, pContact, sContact, logo, address, land) => {
+        console.log(ResId, CityId, name, Oname, email, pContact, sContact, logo, address, land);
+        let restaurantEdit = localStorage.getItem("RestaurantList");
+        let restaurantObj = [];
+        if (restaurantEdit == null) {
+            restaurantObj = [];
+        }
+        else {
+            restaurantObj = [];
+            localStorage.setItem("Contacts", JSON.stringify(restaurantObj))
+        }
+        let restaurantInfo = {
+            "restaurantId": ResId,
+            "fkCityId": CityId,
+            "name": name,
+            "ownerName": Oname,
+            "email": email,
+            "primaryContact": pContact,
+            "secondaryContact": sContact,
+            "logo": logo,
+            "address": address,
+            "landMark": land,
+        }
+
+        restaurantObj.push(restaurantInfo)
+        localStorage.setItem("RestaurantList", JSON.stringify(restaurantObj))
+        console.log(restaurantObj);
+        //     }
+        // })
     }
     return (
         <>
@@ -58,8 +83,8 @@ function AdminRestaurantList() {
                     <table>
                         <thead>
                             <tr>
-                                <td>Id</td>
-                                <td>RestaurantId</td>
+                                {/* <td>Id</td>
+                                <td>RestaurantId</td> */}
                                 <td>Name</td>
                                 <td>Owner Name</td>
                                 <td>Contact</td>
@@ -78,8 +103,8 @@ function AdminRestaurantList() {
                             {/* <!-- Data Item Start --> */}
                             {restaurant.map((element, index) => {
                                 return <tr key={index}>
-                                    <td>{index}</td>
-                                    <td>{element.restaurantId}</td>
+                                    {/* <td>{index}</td>
+                                    <td>{element.restaurantId}</td> */}
                                     <td>{element.name}</td>
                                     <td>{element.ownerName}</td>
                                     <td>{element.primaryContact}</td>
@@ -89,17 +114,17 @@ function AdminRestaurantList() {
                                     <td>{element.address}</td>
                                     <td>{element.landMark}</td>
                                     <td>{element.dateAdded}</td>
-                                    <td><span className="status Active">{element.isActive.toString()}</span></td>
+                                    <td><span className="status Active" style={{ backgroundColor: element.isActive == true ? "#999914" : "red" }}>{element.isActive.toString()}</span></td>
 
                                     {/* <!--z dropdown --> */}
                                     <td className="drop_menu"><span><ion-icon name="caret-down-circle-outline"></ion-icon>
                                         <ul>
-                                            <li className="user-active"><Link to="/">Active</Link></li>
+                                            <li className="user-active"><a onClick={() => handleActive(element.restaurantId)} >{element.isActive != true ? "Active" : "Deactive"}</a></li>
 
-                                            <li id={element.Id}><Link to='/Admin/Contact/ContactEdit' onClick={handleContact}>Edit</Link></li>
-                                            {/* <li id={element.Id}><a onClick={handleContact}>Edit</a></li> */}
+                                            <li id={element.Id}><Link to='/Admin/Restaurantlist/Edit' onClick={() => handleResEdit(element.restaurantId, element.fkCityId, element.name, element.ownerName, element.email, element.primaryContact, element.secondaryContact, element.logo, element.address, element.landMark)}>Edit</Link></li>
+                                            {/* <li id={element.Id}><a onClick={() => handleResEdit(element.restaurantId, element.fkCityId, element.name, element.ownerName, element.email, element.primaryContact, element.secondaryContact, element.logo, element.address, element.landMark)}>Edit</a></li> */}
 
-                                            <li><Link to="/">Delete</Link></li>
+                                            <li><a onClick={() => handleDelete(element.restaurantId)}>Delete</a></li>
                                         </ul>
                                     </span>
                                     </td>

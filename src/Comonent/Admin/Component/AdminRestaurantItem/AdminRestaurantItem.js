@@ -1,79 +1,20 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DateObj from "../DateObj/Date";
 
 function AdminRestaurantItem() {
 
-    const ItemList = [
-        {
-            "itemId": 169,
-            "fkRestaurantId": 7,
-            "fkCategoryId": 54,
-            "name": "Aloo paratha ",
-            "description": "Our  special paratha stuffed with spicy potatoes ",
-            "imgUrl": "169-Alooparatha-235030.jpg",
-            "price": 400,
-            "tax": 10,
-            "status": true,
-            "isActive": true,
-            "isDeleted": false,
-            "dateAdded": "2023-02-01T15:50:29.870096",
-            "restaurant": {
-                "restaurantId": 0,
-                "fkCityId": 0,
-                "name": "",
-                "ownerName": "",
-                "email": "",
-                "primaryContact": "",
-                "secondaryContact": "",
-                "logo": "",
-                "address": "",
-                "landMark": "",
-                "dateAdded": "2023-02-13T10:38:35.4481464+00:00",
-                "isActive": true,
-                "isDeleted": false
-            },
-            "categry": {
-                "categoryId": 54,
-                "fkMenuId": 19,
-                "name": "Parathas"
-            }
-        },
-        {
-            "itemId": 170,
-            "fkRestaurantId": 7,
-            "fkCategoryId": 54,
-            "name": "Lachedar paratha",
-            "description": "specialty of Balochistan that is crispy layered cooked to perfection ",
-            "imgUrl": "170-Lachedarparatha-235233.jpg",
-            "price": 330,
-            "tax": 15,
-            "status": true,
-            "isActive": true,
-            "isDeleted": false,
-            "dateAdded": "2023-02-01T15:52:31.9781182",
-            "restaurant": {
-                "restaurantId": 0,
-                "fkCityId": 0,
-                "name": "",
-                "ownerName": "",
-                "email": "",
-                "primaryContact": "",
-                "secondaryContact": "",
-                "logo": "",
-                "address": "",
-                "landMark": "",
-                "dateAdded": "2023-02-13T10:38:35.4484076+00:00",
-                "isActive": true,
-                "isDeleted": false
-            },
-            "categry": {
-                "categoryId": 54,
-                "fkMenuId": 19,
-                "name": "Parathas"
-            }
-        }
-    ]
+    const [ItemList, setItemList] = useState([]);
+
+    async function itemlists() {
+        await axios.get("http://144.91.86.203/apiresturant/Items?rid=7&cid=54").then((res) => setItemList(res.data));
+    }
+
+    useEffect(() => {
+      itemlists()
+    }, [])
+    
 
     const handleContact = (e) => {
         // let ID = e.target.parentElement.id;
@@ -116,10 +57,10 @@ function AdminRestaurantItem() {
                     <table>
                         <thead>
                             <tr>
-                                <td>Id</td>
+                                {/* <td>Id</td>
                                 <td>ItemId</td>
                                 <td>RestaurantId</td>
-                                <td>CategoryId</td>
+                                <td>CategoryId</td> */}
                                 <td>Name</td>
                                 <td>Description</td>
                                 <td>Image</td>
@@ -138,10 +79,10 @@ function AdminRestaurantItem() {
                             {/* <!-- Data Item Start --> */}
                             {ItemList.map((element, index) => {
                                 return <tr key={index}>
-                                    <td>{index}</td>
+                                    {/* <td>{index}</td>
                                     <td>{element.itemId}</td>
                                     <td>{element.fkRestaurantId}</td>
-                                    <td>{element.fkCategoryId}</td>
+                                    <td>{element.fkCategoryId}</td> */}
                                     <td>{element.name}</td>
                                     <td style={{ minWidth: "250px" }}>{element.description}</td>
                                     <td className="linehight" style={{ minWidth: "300px" }}>{element.imgUrl}</td>

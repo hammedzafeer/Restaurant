@@ -7,7 +7,9 @@
 
 }
 
-.create_banner_container form button {
+.create_banner_container form button,
+.create_banner_container form a,
+.create_banner_container form link {
     margin-top: 2rem;
 }
 

@@ -24,9 +24,9 @@ import AdminEditReviewIndex from './pages/ADMIN/AdminReviewEditPage';
 import AdminLogin from './Comonent/Admin/Component/Login/Login';
 import Apply from './pages/Apply';
 import NoPage from './pages/NoPage';
-import AdminRestaurantListIndex from './pages/ADMIN/AdminRestaurantListPage';
+// import AdminRestaurantListIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantListPage';
 import AdminCustomerListIndex from './pages/ADMIN/AdminCustomersListPage';
-import RestaurantCreateIndex from './pages/ADMIN/AdminRestaurantCreatePage';
+// import RestaurantCreateIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantCreatePage';
 import AdminRestaurantItemIndex from './pages/ADMIN/ListAdminItem';
 import AdminRestaurantOrderIndex from './pages/ADMIN/Admin Order/ListAdminOrder';
 import AdminNewOrderIndex from './pages/ADMIN/Admin Order/AdminNewOrderIndex';
@@ -38,6 +38,9 @@ import AdminOrderOnTheWayIndex from './pages/ADMIN/Admin Order/AdminOrderOnTheWa
 import AdminCategoryListIndex from './pages/ADMIN/AdminCategoryListIndex';
 import AdminItemVritiesIndex from './pages/ADMIN/AdminItemVrities/AdminItemVritiesIndex';
 import AdminRiderIndex from './pages/ADMIN/AdminRider/AdminRiderIndex';
+import AdminRestaurantListIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantListPage';
+import RestaurantCreateIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantCreatePage';
+import RestaurantEditIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantEditPage';
 
 function App() {
 
@@ -69,6 +72,7 @@ function App() {
         <Route exect path='/Admin/Login' element={<AdminLogin />} />
         <Route exect path='/Admin/Restaurantlist' element={<AdminRestaurantListIndex />} />
         <Route exect path='/Admin/RestaurantCreate' element={<RestaurantCreateIndex />} />
+        <Route exect path='/Admin/Restaurantlist/Edit' element={<RestaurantEditIndex />} />
 
         <Route exect path='/Admin/Customerslist' element={<AdminCustomerListIndex />} />
 

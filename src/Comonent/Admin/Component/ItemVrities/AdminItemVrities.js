@@ -1,99 +1,18 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function AdminItemVrities() {
 
-    const ItemList = [
-        {
-            "itemVerityId": 1,
-            "fkItemId": 120,
-            "name": "Extra Suger",
-            "addPrice": 50,
-            "status": true,
-            "isActive": true,
-            "isDeleted": false,
-            "dateAdded": "2022-12-28T09:40:28.107889",
-            "item": {
-                "itemId": 120,
-                "fkRestaurantId": 7,
-                "fkCategoryId": 45,
-                "name": "Jalebi",
-                "description": "Single Serving ",
-                "imgUrl": "120-Jalebi-233147.jpg",
-                "price": 495,
-                "tax": 10,
-                "status": true,
-                "isActive": true,
-                "isDeleted": false,
-                "dateAdded": "2023-02-01T13:03:34.62619",
-                "restaurant": {
-                    "restaurantId": 0,
-                    "fkCityId": 0,
-                    "name": "",
-                    "ownerName": "",
-                    "email": "",
-                    "primaryContact": "",
-                    "secondaryContact": "",
-                    "logo": "",
-                    "address": "",
-                    "landMark": "",
-                    "dateAdded": "2023-02-14T09:15:44.8176075+00:00",
-                    "isActive": true,
-                    "isDeleted": false
-                },
-                "categry": {
-                    "categoryId": 0,
-                    "fkMenuId": 0,
-                    "name": ""
-                }
-            }
-        },
-        {
-            "itemVerityId": 2,
-            "fkItemId": 120,
-            "name": "Extra cheese ",
-            "addPrice": 45,
-            "status": true,
-            "isActive": true,
-            "isDeleted": false,
-            "dateAdded": "2023-01-21T16:07:05.1244084",
-            "item": {
-                "itemId": 120,
-                "fkRestaurantId": 7,
-                "fkCategoryId": 45,
-                "name": "Jalebi",
-                "description": "Single Serving ",
-                "imgUrl": "120-Jalebi-233147.jpg",
-                "price": 495,
-                "tax": 10,
-                "status": true,
-                "isActive": true,
-                "isDeleted": false,
-                "dateAdded": "2023-02-01T13:03:34.62619",
-                "restaurant": {
-                    "restaurantId": 0,
-                    "fkCityId": 0,
-                    "name": "",
-                    "ownerName": "",
-                    "email": "",
-                    "primaryContact": "",
-                    "secondaryContact": "",
-                    "logo": "",
-                    "address": "",
-                    "landMark": "",
-                    "dateAdded": "2023-02-14T09:15:44.8176075+00:00",
-                    "isActive": true,
-                    "isDeleted": false
-                },
-                "categry": {
-                    "categoryId": 0,
-                    "fkMenuId": 0,
-                    "name": ""
-                }
-            }
-        }
-    ]
+    const[itemVrities, setItemVrities] = useState([])
 
+    async function ItemVritiesList() {
+        await axios.get("http://144.91.86.203/apiresturant/ItemVrities?Iid=120").then((res) => setItemVrities(res.data))
+    }
+    useEffect(() => {
+      ItemVritiesList()
+    }, [])
+    
     const handleContact = (e) => {
         // let ID = e.target.parentElement.id;
         // console.log(ID);
@@ -142,7 +61,7 @@ function AdminItemVrities() {
                         </thead>
                         <tbody>
                             {/* <!-- Data Item Start --> */}
-                            {ItemList.map((element, index) => {
+                            {itemVrities.map((element, index) => {
                                 return <tr key={index}>
                                     <td>{element.name}</td>
                                     <td>{element.addPrice}</td>
