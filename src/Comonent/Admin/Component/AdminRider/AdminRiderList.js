@@ -1,98 +1,30 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DateObj from "../DateObj/Date";
 
 function AdminRider() {
     const [Dates, setDates] = useState()
+    const [RiderList, setRiderList] = useState([])
 
-    const RiderList = [
-        {
-            "riderId": 1,
-            "fkCityId": 1,
-            "fkRestaurantId": 5,
-            "fName": "abdul",
-            "lName": "basir",
-            "dob": "2004-12-27T10:50:19.1746567",
-            "gender": "m",
-            "cnic": "15306-6322934-7",
-            "contactNo": "03001231230",
-            "email": "abc@gmail.com",
-            "imgUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "cnicFront": "https://i.pinimg.com/564x/88/d2/07/88d207b28746221eaf22a8523469599a.jpg",
-            "cnicBack": "https://online.theunitedinsurance.com/Admin_files/Images/cnic-back-side.jpg",
-            "rideName": "string",
-            "rideColor": "string",
-            "rideModel": "string",
-            "riderLicense": "https://www.shutterstock.com/image-vector/flat-man-driver-license-plastic-260nw-645891550.jpg",
-            "bikePapers": "https://www.motorcyclevalley.com/images/media/1618985909_172314381_892056961588189_1136016952267616446_n.jpg",
-            "dateAdded": "2022-12-27T14:50:19.1746384",
-            "isActive": true,
-            "isVerified": true,
-            "isDeleted": false,
-            "restaurant": {
-                "restaurantId": 0,
-                "fkCityId": 0,
-                "name": "",
-                "ownerName": "",
-                "email": "",
-                "primaryContact": "",
-                "secondaryContact": "",
-                "logo": "",
-                "address": "",
-                "landMark": "",
-                "dateAdded": "2023-02-14T10:15:38.4398269+00:00",
-                "isActive": true,
-                "isDeleted": false
-            }
-        },
-        {
-            "riderId": 2,
-            "fkCityId": 1,
-            "fkRestaurantId": 5,
-            "fName": "AbdulBasir",
-            "lName": "Arbab",
-            "dob": "2004-12-27T11:13:55.7180095",
-            "gender": "m",
-            "cnic": "15306-6322934-7",
-            "contactNo": "034755566333",
-            "email": "co08979@gmail.com",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            "cnicFront": "https://i.pinimg.com/564x/88/d2/07/88d207b28746221eaf22a8523469599a.jpg",
-            "cnicBack": "https://online.theunitedinsurance.com/Admin_files/Images/cnic-back-side.jpg",
-            "rideName": "string",
-            "rideColor": "string",
-            "rideModel": "string",
-            "riderLicense": "https://www.shutterstock.com/image-vector/flat-man-driver-license-plastic-260nw-645891550.jpg",
-            "bikePapers": "https://www.motorcyclevalley.com/images/media/1618985909_172314381_892056961588189_1136016952267616446_n.jpg",
-            "dateAdded": "2022-12-27T15:13:55.7179962",
-            "isActive": true,
-            "isVerified": true,
-            "isDeleted": false,
-            "restaurant": {
-                "restaurantId": 0,
-                "fkCityId": 0,
-                "name": "",
-                "ownerName": "",
-                "email": "",
-                "primaryContact": "",
-                "secondaryContact": "",
-                "logo": "",
-                "address": "",
-                "landMark": "",
-                "dateAdded": "2023-02-14T10:15:38.4904471+00:00",
-                "isActive": true,
-                "isDeleted": false
-            }
-        }
-    ]
+    const Rider = async () => {
+        await axios.get("http://144.91.86.203/apiresturant/Riders?rid=0")
+            .then((res) => {
+                setRiderList(res.data);
+            })
+        console.log("O");
+    }
+
+
     useEffect(() => {
-        RiderList.map((ele) => {
-            let date = ele.dateAdded;
-            setDates(date)
-        })
+        Rider()
+        // RiderList.map((ele) => {
+        //     let date = ele.dateAdded;
+        //     setDates(date)
+        // })
     }, [])
-    
-    
+
+
 
     const handleContact = (e) => {
         // let ID = e.target.parentElement.id;
@@ -135,6 +67,7 @@ function AdminRider() {
                     <table>
                         <thead>
                             <tr>
+                                <td>Action</td>
                                 <td>FName</td>
                                 <td>LName</td>
                                 <td>DOB</td>
@@ -159,6 +92,7 @@ function AdminRider() {
                             {/* <!-- Data Item Start --> */}
                             {RiderList.map((element, index) => {
                                 return <tr key={index}>
+                                    <td><a className="btn">{element.fkRestaurantId == 0 ? "Assign Restaurat" : "Internal"}</a></td>
                                     <td>{element.fName}</td>
                                     <td>{element.lName}</td>
                                     {/* <td>{element.dob}</td> */}
@@ -175,7 +109,7 @@ function AdminRider() {
                                     <td>{element.rideModel}</td>
                                     <td><img src={element.riderLicense} alt="" /></td>
                                     <td><img src={element.bikePapers} alt="" /></td>
-                                    <DateObj Dates = {element.dateAdded}/>
+                                    <DateObj Dates={element.dateAdded} />
                                     {/* <td>{element.dateAdded}</td> */}
 
                                     {/* <!--z dropdown --> */}

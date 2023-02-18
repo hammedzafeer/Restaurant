@@ -2,13 +2,20 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function AdminCustomersList() {
+function AdminCustomersList(props) {
 
     const [customers, setCustomers] = useState([])
     const Contact = []
-     function CustomerApi() {
-        axios.get('http://144.91.86.203/apiresturant/Customers?rid=0')
-        .then((res) => setCustomers(res.data))
+     async function CustomerApi() {
+        props.setProgress(20)
+        await axios.get('http://144.91.86.203/apiresturant/Customers?rid=0')
+        .then((res) => {
+            props.setProgress(50)
+            setCustomers(res.data)
+            props.setProgress(80)
+        })
+        props.setProgress(100)
+
     }
 
 

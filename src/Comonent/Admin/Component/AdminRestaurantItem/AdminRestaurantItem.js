@@ -3,18 +3,24 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DateObj from "../DateObj/Date";
 
-function AdminRestaurantItem() {
+function AdminRestaurantItem(props) {
 
     const [ItemList, setItemList] = useState([]);
 
     async function itemlists() {
-        await axios.get("http://144.91.86.203/apiresturant/Items?rid=7&cid=54").then((res) => setItemList(res.data));
+        props.setProgress(10)
+        await axios.get("http://144.91.86.203/apiresturant/Items?rid=7&cid=54").then((res) => {
+            props.setProgress(50)
+            setItemList(res.data)
+            props.setProgress(70)
+        });
+        props.setProgress(100)
     }
 
     useEffect(() => {
-      itemlists()
+        itemlists()
     }, [])
-    
+
 
     const handleContact = (e) => {
         // let ID = e.target.parentElement.id;

@@ -41,6 +41,8 @@ import AdminRiderIndex from './pages/ADMIN/AdminRider/AdminRiderIndex';
 import AdminRestaurantListIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantListPage';
 import RestaurantCreateIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantCreatePage';
 import RestaurantEditIndex from './pages/ADMIN/AdminRestaurantList/AdminRestaurantEditPage';
+import AdminCitiesIndex from './pages/ADMIN/AdminCities/AdminCitiesPage';
+import AdminCitiesDetailsIndex from './pages/ADMIN/AdminCities/AdminCitiesDetailsPage';
 
 function App() {
 
@@ -90,6 +92,9 @@ function App() {
         <Route exect path='/Admin/ItemVrities' element={<AdminItemVritiesIndex />} />
         <Route exect path='/Admin/Rider' element={<AdminRiderIndex />} />
 
+        {/* Cities */}
+        <Route exect path='/Admin/Cities' element={<AdminCitiesIndex />} />
+        <Route exect path="/Admin/Cities/Details" element={<AdminCitiesDetailsIndex />} />
 
         <Route exect path='*' element={<NoPage />} />
 

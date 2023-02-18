@@ -49,7 +49,7 @@ function AdminRestaurantList(props) {
         }
         else {
             restaurantObj = [];
-            localStorage.setItem("Contacts", JSON.stringify(restaurantObj))
+            localStorage.setItem("RestaurantList", JSON.stringify(restaurantObj))
         }
         let restaurantInfo = {
             "restaurantId": ResId,

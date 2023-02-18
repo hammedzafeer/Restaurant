@@ -6,24 +6,7 @@ function Navbar() {
         document.getElementById("imgLogo").classList.toggle("imgHide")
     }
     return (
-        // <div className='nav_container'>
-        //     <nav>
-        //         <ul className="menu_container">
-        //             <li><Link to="/">Home</Link></li>
-        //             <li><Link to="/about">About</Link></li>
-        //             <li><Link to="/contact">Contact</Link></li>
-        //             <li><Link to="/success">Success Stories</Link></li>
-        //             {/* <li><Link to="/success">Apply</Link></li> */}
-        //         </ul>
-        //         <div className="menu_header">
-        //             {/* <h1>Staff Restaurantx</h1>
-        //             <Link to="/resturents">resturentstaff.pk</Link> */}
-        //             <img src={logo} alt="" />
-        //             <Link to="/admin">Admin</Link>
-        //         </div>
-
-        //     </nav>
-        // </div>
+        
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">

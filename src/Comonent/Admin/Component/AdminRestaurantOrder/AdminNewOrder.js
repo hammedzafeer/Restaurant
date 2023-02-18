@@ -17,7 +17,7 @@ function AdminNewOrder() {
                     <table>
                         <thead>
                             <tr>
-                                <td>Id</td>
+                                <td>Action</td>
                                 <td>OrderId</td>
                                 <td>Price</td>
                                 <td>Name</td>

@@ -148,6 +148,15 @@ function AdminNav(props) {
                         </Link>
                     </li>
                     {/* <!-- ===== Menu Item End ===== --> */}
+                    {/* <!-- ===== Menu Item Start ===== --> */}
+                    <li className={`${props.cities}`} onClick={handleClick}>
+                        <Link to="/Admin/Cities">
+                            <span className="icon">
+                            <ion-icon name="earth-outline"></ion-icon>                            </span>
+                            <span className="title">Cities</span>
+                        </Link>
+                    </li>
+                    {/* <!-- ===== Menu Item End ===== --> */}
 
                     {/* <!-- ===== Menu Item Start ===== --> */}
                     <li className={`${props.SignOut}`} onClick={handleClick}>

@@ -124,35 +124,35 @@ function RestaurantCreate() {
                             <input type="text" id='name' value={name} onChange={handleName} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="name">Owner Name</label>
-                            <input type="text" id='name' value={ownerName} onChange={handleOwnerName} />
+                            <label htmlFor="ownerName">Owner Name</label>
+                            <input type="text" id='ownerName' value={ownerName} onChange={handleOwnerName} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="name">Email</label>
-                            <input type="email" id='name' value={email} onChange={handleEmail} />
+                            <label htmlFor="email">Email</label>
+                            <input type="email" id='email' value={email} onChange={handleEmail} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="name">Primary Contact</label>
-                            <input type="text" id='name' value={pContact} onChange={handlePContact} />
+                            <label htmlFor="pContact">Primary Contact</label>
+                            <input type="text" id='pContact' value={pContact} onChange={handlePContact} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="name">Secondary Contact (optional)</label>
-                            <input type="text" id='name' value={sContact} onChange={handleSContact} />
+                            <label htmlFor="sContact">Secondary Contact (optional)</label>
+                            <input type="text" id='sContact' value={sContact} onChange={handleSContact} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="name">City</label>
-                            <select name="" id="" required onChange={handleCity}>
+                            <label htmlFor="City">City</label>
+                            <select name="" id="City" required onChange={handleCity}>
                                 <option value="list" >List of City</option>
                                 <City />
                             </select>
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="url">Address</label>
-                            <input type="text" id='url' value={address} onChange={handleAddress} />
+                            <label htmlFor="Address">Address</label>
+                            <input type="text" id='Address' value={address} onChange={handleAddress} />
                         </div>
                         <div className="banner_flex">
-                            <label htmlFor="url">Land Mark</label>
-                            <input type="text" id='url' value={landMark} onChange={handleLandMark} />
+                            <label htmlFor="landMark">Land Mark</label>
+                            <input type="text" id='landMark' value={landMark} onChange={handleLandMark} />
                         </div>
                         <div className="banner_flex">
                             <label htmlFor="webBanner">Upload Img</label>
